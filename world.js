@@ -63,9 +63,8 @@ function p3_drawTile(i, j) {
 
   strokeWeight(3);
   stroke(random(130), random(130, 255), random(130));
-  line(th, tw, th+16, tw+16);
-  line(th, tw, th, tw+16);
-  line(th+16, tw, th, tw+16);
+  line(th, tw, th+16, tw);
+
   strokeWeight(1);
 
   let n = clicks[[i, j]] | 0;
