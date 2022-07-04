@@ -48,8 +48,28 @@ function p3_tileClicked(i, j) {
 function p3_drawBefore() {}
 
 function p3_drawTile(i, j) {
-  noStroke();
-  fill(noise(i, j) * 255)
+// stroke(1);
+//   fill(noise(i, j) * 255)
+if (i % 2 == 1 & j % 2 == 1){
+    // stroke(255, 255, 0);
+    fill(noise(i, j) * 230);
+}
+else if (i % 3 == 1 ){
+    // stroke(0, 255, 255);
+    fill(noise(i, j) * 200);
+}
+else if (j % 5 == 0){
+    // stroke(255, 0, 255);
+    fill(noise(i, j) * 255);
+
+}
+if (i < 0 && j < 0) {
+    fill(noise(i,j) * 255);
+}
+if (i < 0 && j > 0) {
+    fill(255, 255, 255);
+}
+
 
   push();
 
@@ -62,10 +82,11 @@ function p3_drawTile(i, j) {
 
 
   strokeWeight(3);
-  stroke(random(130), random(130, 255), random(130));
+  stroke(255, 255, random(255));
   line(th, tw, th+16, tw);
+  line(th, tw, th, tw+16);
 
-  strokeWeight(1);
+  strokeWeight(3);
 
   let n = clicks[[i, j]] | 0;
   if (i % 2 == 1 && n % 2 == 1) {
