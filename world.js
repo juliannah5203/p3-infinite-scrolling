@@ -50,6 +50,7 @@ function p3_drawBefore() {}
 function p3_drawTile(i, j) {
 // stroke(1);
 //   fill(noise(i, j) * 255)
+noStroke();
 if (i % 2 == 1 & j % 2 == 1){
     // stroke(255, 255, 0);
     fill(noise(i, j) * 230);
@@ -86,7 +87,7 @@ if (i < 0 && j > 0) {
   line(th, tw, th+16, tw);
   line(th, tw, th, tw+16);
 
-  strokeWeight(3);
+  strokeWeight(2);
 
   let n = clicks[[i, j]] | 0;
   if (i % 2 == 1 && n % 2 == 1) {

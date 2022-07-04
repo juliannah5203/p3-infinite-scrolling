@@ -1,4 +1,4 @@
-# p1-text-generation
+# p3-infinite-scrolling
 Author: Julianna J. He <br />
 Date: Jul. 3, 2022 <br />
 Title: Infinite Scrolling World
